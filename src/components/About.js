@@ -5,7 +5,11 @@ function About(props) {
   return (
     <div id="about">
       <h2>About Me</h2>
-      {props.bio && props.bio.trim() !== "" ? <p>{props.bio}</p> : null}
+
+      console.log(props.bio)
+
+      {/* {props.bio && props.bio.trim() !== "" ? <p>{props.bio}</p> : null} */}
+      {props.bio !== null && props.bio !== "" && props.bio !== undefined ? <p>{props.bio}</p> : null}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       <Links github={props.github} linkedin={props.linkedin} />
     </div>
@@ -13,3 +17,7 @@ function About(props) {
 }
 
 export default About;
+
+
+
+
